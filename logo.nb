@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     92496,       2339]
-NotebookOptionsPosition[     88727,       2270]
-NotebookOutlinePosition[     89128,       2286]
-CellTagsIndexPosition[     89085,       2283]
+NotebookDataLength[     92666,       2342]
+NotebookOptionsPosition[     88897,       2273]
+NotebookOutlinePosition[     89298,       2289]
+CellTagsIndexPosition[     89255,       2286]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2198,7 +2198,7 @@ Cell[BoxData[{
  RowBox[{"Export", "[", 
   RowBox[{
    RowBox[{
-    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<newlogo3.pdf\>\""}], 
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<newlogo3.jpg\>\""}], 
    ",", 
    RowBox[{"%", "//", "RemoveBackground"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.748880167829975*^9, 3.7488801678302317`*^9}, {
@@ -2206,9 +2206,10 @@ Cell[BoxData[{
    3.748881189177897*^9}, {3.748881248581408*^9, 3.74888125497913*^9}, {
    3.8158294330313816`*^9, 3.815829464401123*^9}, {3.815829593781271*^9, 
    3.8158296072214174`*^9}, {3.8158297922115116`*^9, 3.815829850991601*^9}, 
-   3.8158299144116635`*^9, {3.815830777020955*^9, 
-   3.815830777130759*^9}},ExpressionUUID->"bff12800-40cd-4776-8eee-\
-bfdf0ed31a56"],
+   3.8158299144116635`*^9, {3.815830777020955*^9, 3.815830777130759*^9}, {
+   3.8158315144307065`*^9, 3.8158315146410275`*^9}},
+ CellLabel->
+  "In[941]:=",ExpressionUUID->"bff12800-40cd-4776-8eee-bfdf0ed31a56"],
 
 Cell[BoxData[
  GraphicsBox[{
@@ -2254,18 +2255,20 @@ Cell[BoxData[
       FontWeight->Bold], {-5.25, -0.25}]}}]], "Output",
  CellChangeTimes->{
   3.815829608021771*^9, {3.815829795581027*^9, 3.8158298512511473`*^9}, 
-   3.8158299146210585`*^9, 3.8158299672513*^9},
+   3.8158299146210585`*^9, 3.8158299672513*^9, 3.815830779020708*^9, 
+   3.8158315157808285`*^9},
  CellLabel->
-  "Out[935]=",ExpressionUUID->"6764ae17-dde7-486f-bd92-260f8e2c15c2"],
+  "Out[943]=",ExpressionUUID->"694e3834-e3ea-4377-9dd1-8b67aeda3633"],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\Christopher \
-Plumberg\\\\Documents\\\\GitHub\\\\astrophysicist87.github.io\\\\newlogo3.png\
+Plumberg\\\\Documents\\\\GitHub\\\\astrophysicist87.github.io\\\\newlogo3.jpg\
 \"\>"], "Output",
  CellChangeTimes->{
   3.815829608021771*^9, {3.815829795581027*^9, 3.8158298512511473`*^9}, 
-   3.8158299146210585`*^9, 3.8158299675011683`*^9},
+   3.8158299146210585`*^9, 3.8158299672513*^9, 3.815830779020708*^9, 
+   3.815831516060641*^9},
  CellLabel->
-  "Out[936]=",ExpressionUUID->"2cfcf725-e420-4736-b4a3-e102ceb9125f"]
+  "Out[944]=",ExpressionUUID->"31ee3260-9284-47f7-9cac-8e4ae8d9a486"]
 }, Open  ]]
 },
 WindowSize->{1141.2, 574.8},
@@ -2337,9 +2340,9 @@ Cell[77079, 1974, 2594, 47, 55, "Output",ExpressionUUID->"96c56ac5-26b3-42d9-972
 Cell[79676, 2023, 305, 4, 32, "Output",ExpressionUUID->"1d3c9e71-ce9d-4fd7-9977-6b3e3e964833"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[80018, 2032, 6166, 178, 370, "Input",ExpressionUUID->"bff12800-40cd-4776-8eee-bfdf0ed31a56"],
-Cell[86187, 2212, 2150, 46, 263, "Output",ExpressionUUID->"6764ae17-dde7-486f-bd92-260f8e2c15c2"],
-Cell[88340, 2260, 371, 7, 32, "Output",ExpressionUUID->"2cfcf725-e420-4736-b4a3-e102ceb9125f"]
+Cell[80018, 2032, 6242, 179, 370, "Input",ExpressionUUID->"bff12800-40cd-4776-8eee-bfdf0ed31a56"],
+Cell[86263, 2213, 2200, 47, 263, "Output",ExpressionUUID->"694e3834-e3ea-4377-9dd1-8b67aeda3633"],
+Cell[88466, 2262, 415, 8, 32, "Output",ExpressionUUID->"31ee3260-9284-47f7-9cac-8e4ae8d9a486"]
 }, Open  ]]
 }
 ]
