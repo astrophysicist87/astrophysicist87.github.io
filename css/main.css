@@ -1119,8 +1119,8 @@ header .logo a {
 	color: transparent;
 	width: 125px;
 	height: 45px;
-	background: url("../newlogo3.png") no-repeat center;
-	background-size: 115px 25px;
+	background: url("../logo.png") no-repeat center;
+	background-size: 115px 50px;
 }
 
 /**
