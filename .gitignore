@@ -1,2 +1,11 @@
 
 public_html.zip
+*.aux
+*.gz
+*.bib
+*.log
+*.out
+*.tmp
+*.e
+*.o
+*.exe
