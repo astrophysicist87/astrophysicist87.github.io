@@ -1,0 +1,96 @@
+# Following these instructions sets you up for the
+# Rivet for Heavy Ions workshop.
+#
+# It is recommended to install dependencies and Rivet on your
+# own machine, help for doing this is provided in Section
+# 1a. If you, for some reason, cannot do this, it is 
+# possible to download a virtual machine (used at schools)
+# and work on that. Follow the instructions on:
+# http://www.slac.stanford.edu/~shoeche/mcnet18/
+# and go to Section 1b once you are ready.
+# If you have your dependencies in place, go directly 
+# to Section 2.
+#
+# Section 1a
+# Make a new directory for the workshop
+mkdir rivet-ws
+cd rivet-ws
+# Make an installation directory for the tools
+mkdir install
+
+# Install HepMC
+wget http://hepmc.web.cern.ch/hepmc/releases/hepmc2.06.09.tgz
+tar xvf hepmc2.06.09.tgz
+cd hepmc2.06.09
+./configure --with-momentum=GEV --with-length=CM --prefix=/path/to/install/dir
+make -jN # where N is number of available cores
+make install
+
+# Install FastJet
+wget http://fastjet.fr/repo/fastjet-3.3.1.tar.gz
+tar xvf fastjet-3.3.1.tar.gz
+cd fastjet-3.3.1
+./configure --enable-allplugins --prefix=/path/to/install/dir
+make -jN
+make install
+
+# Install YODA
+wget http://www.hepforge.org/archive/yoda/YODA-1.7.1.tar.gz
+tar xvf YODA-1.7.1.tar.gz
+cd YODA-1.7.1
+./configure --prefix=/path/to/install/dir
+make -jN
+make install
+
+# Export relevant paths
+export PATH=$PATH:/path/to/install/dir/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/install/dir/lib
+export LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/install/dir/lib
+
+# The number 1 system dependency which you may not have
+# satisfied is Cython. It can be installed through pip
+
+# Section 1b
+# After booting up the virtual machine, set the keyboard 
+# to accomodate your local language (sudo password is 2018)
+sudo dpkg-reconfigure keyboard-configuration
+# You might want to update your package repository
+# and install a decent terminal and texteditor
+sudo apt-get update
+sudo apt-get install gnome-terminal
+# etc..
+# Install cython
+pip install cython
+# You are now ready for section 2.
+
+
+# Section 2:
+# Setting up GitLab and compiling Rivet
+# Go to gitlab.bierlich.net, create a user and login. Click Explore projects/All and select
+# the hi-rivet project. Click on the project, you are prompted to set up an ssh key. 
+# Do so, following the instructions. Also request access to the project, this is needed for later.
+# After that you should be able to clone the project by:
+git clone git@gitlab.bierlich.net:bierlich/hi-rivet.git
+cd hi-rivet
+# It is now time to compile Rivet
+autoreconf -i # if you do not have autotools installed, install it.
+./configure --prefix=/path/to/install/dir # if you use the VM this should be --prefix=/opt/hep/
+make -jN
+make install
+
+# Create a branch for your changes by
+git checkout -b <suitable name>
+# You can now make changes, and commit them as you wish. All is stored on your local branch.
+# Example:
+echo test text > testfile
+git add testfile
+git commit -m"test message"
+git push origin <suitable name>
+# Once you want to merge your changes, create a merge request through the 
+# GitLab web interface: https://gitlab.bierlich.net/bierlich/hi-rivet/merge_requests
+# The merge request needs to be approved in order to prevent total chaos :-).
+#
+# Section 3
+# It is not much help to have Rivet installed if you don't have an MC generator.
+# If you don't have any HepMC compatible generator installed, download and install
+# Pythia8, using instructions on the home page: http://home.thep.lu.se/Pythia/
